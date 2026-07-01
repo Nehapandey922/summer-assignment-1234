@@ -1,0 +1,136 @@
+Q33. Write a program to print reverse star pattern.
+Pattern
+*****
+****
+***
+**
+*
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 5; i >= 1; i--)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Output
+*****
+****
+***
+**
+*
+
+Q34. Write a program to print reverse number triangle.
+Pattern
+12345
+1234
+123
+12
+1
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 5; i >= 1; i--)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Output
+12345
+1234
+123
+12
+1
+Q35. Write a program to print repeated character pattern.
+Pattern
+A
+BB
+CCC
+DDDD
+EEEEE
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("%c", 'A' + i - 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Output
+A
+BB
+CCC
+DDDD
+EEEEE
+Q36. Write a program to print hollow square pattern.
+Pattern
+*****
+*   *
+*   *
+*   *
+*****
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= 5; j++)
+        {
+            if(i == 1 || i == 5 || j == 1 || j == 5)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Output
+*****
+*   *
+*   *
+*   *
+*****
