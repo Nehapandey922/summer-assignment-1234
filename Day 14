@@ -1,0 +1,169 @@
+📌 Q53. Linear Search
+Question
+Write a C program to perform Linear Search in an array.
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int n, arr[100], key, i, found = 0;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] == key)
+        {
+            printf("Element found at position %d", i + 1);
+            found = 1;
+            break;
+        }
+    }
+
+    if(found == 0)
+        printf("Element not found");
+
+    return 0;
+}
+
+Sample Output
+Enter number of elements: 5
+Enter array elements:
+10 20 30 40 50
+Enter element to search: 30
+Element found at position 3
+
+📌 Q54. Frequency of an Element
+Question
+Write a C program to find the frequency of an element in an array.
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int n, arr[100], key, count = 0, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Enter element to find frequency: ");
+    scanf("%d", &key);
+
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] == key)
+            count++;
+    }
+
+    printf("Frequency of %d = %d", key, count);
+
+    return 0;
+}
+
+Sample Output
+Enter number of elements: 6
+Enter array elements:
+2 5 2 8 2 9
+Enter element to find frequency: 2
+Frequency of 2 = 3
+
+📌 Q55. Second Largest Element
+Question
+Write a C program to find the second largest element in an array.
+
+Code
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+    int n, arr[100], i;
+    int largest = INT_MIN, second = INT_MIN;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    for(i = 0; i < n; i++)
+    {
+        if(arr[i] > largest)
+        {
+            second = largest;
+            largest = arr[i];
+        }
+        else if(arr[i] > second && arr[i] != largest)
+        {
+            second = arr[i];
+        }
+    }
+
+    printf("Second Largest Element = %d", second);
+
+    return 0;
+}
+
+Sample Output
+Enter number of elements: 5
+Enter array elements:
+12 45 67 23 89
+Second Largest Element = 67
+
+📌 Q56. Find Duplicate Elements
+Question
+Write a C program to find duplicate elements in an array.
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int n, arr[100], i, j;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Duplicate elements are:\n");
+
+    for(i = 0; i < n; i++)
+    {
+        for(j = i + 1; j < n; j++)
+        {
+            if(arr[i] == arr[j])
+            {
+                printf("%d\n", arr[i]);
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
+
+Sample Output
+Enter number of elements: 7
+Enter array elements:
+2 4 6 2 8 4 9
+
+Duplicate elements are:
+2
