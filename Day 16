@@ -1,0 +1,141 @@
+📌 Q61. Find Missing Number in an Array
+Question
+Write a C program to find the missing number in an array containing numbers from 1 to N.
+
+Code
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 3, 5};
+    int n = 5;
+    int total = n * (n + 1) / 2;
+    int sum = 0;
+
+    for(int i = 0; i < n - 1; i++) {
+        sum += arr[i];
+    }
+
+    printf("Missing Number = %d\n", total - sum);
+
+    return 0;
+}
+
+Output
+Missing Number = 4
+Explanation
+
+Calculate the sum of numbers from 1 to N.
+Subtract the array sum from the total sum.
+
+📌 Q62. Find Maximum Frequency Element
+Question
+Write a C program to find the element with the highest frequency.
+
+Code
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 2, 3, 4, 2, 5};
+    int n = 7;
+
+    int maxCount = 0, element;
+
+    for(int i = 0; i < n; i++) {
+        int count = 1;
+
+        for(int j = i + 1; j < n; j++) {
+            if(arr[i] == arr[j])
+                count++;
+        }
+
+        if(count > maxCount) {
+            maxCount = count;
+            element = arr[i];
+        }
+    }
+
+    printf("Maximum Frequency Element = %d\n", element);
+    printf("Frequency = %d\n", maxCount);
+
+    return 0;
+}
+
+Output
+Maximum Frequency Element = 2
+Frequency = 3
+Explanation
+
+Count occurrences of every element.
+Print the element with the highest frequency.
+
+📌 Q63. Find Pair with Given Sum
+Question
+Write a C program to find all pairs whose sum equals a given value.
+
+Code
+#include <stdio.h>
+
+int main() {
+    int arr[] = {2, 4, 3, 5, 7, 8, 9};
+    int n = 7;
+    int sum = 7;
+
+    printf("Pairs are:\n");
+
+    for(int i = 0; i < n; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(arr[i] + arr[j] == sum) {
+                printf("(%d, %d)\n", arr[i], arr[j]);
+            }
+        }
+    }
+
+    return 0;
+}
+
+Output
+Pairs are:
+(2, 5)
+(4, 3)
+Explanation
+
+Compare every pair.
+Print pairs whose sum matches the given value.
+
+📌 Q64. Remove Duplicates from an Array
+Question
+Write a C program to remove duplicate elements from an array.
+
+Code
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 2, 3, 4, 4, 5};
+    int n = 7;
+
+    printf("Array after removing duplicates:\n");
+
+    for(int i = 0; i < n; i++) {
+        int duplicate = 0;
+
+        for(int j = 0; j < i; j++) {
+            if(arr[i] == arr[j]) {
+                duplicate = 1;
+                break;
+            }
+        }
+
+        if(!duplicate)
+            printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+
+Output
+Array after removing duplicates:
+1 2 3 4 5
+
+Explanation
+Check whether the current element has already appeared.
+Print only unique elements.
