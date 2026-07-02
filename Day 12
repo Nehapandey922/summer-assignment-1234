@@ -1,0 +1,146 @@
+Q45. Write a program to write a function for Palindrome.
+
+Code
+#include <stdio.h>
+
+int palindrome(int n)
+{
+    int temp = n, rev = 0;
+
+    while (n != 0)
+    {
+        rev = rev * 10 + n % 10;
+        n = n / 10;
+    }
+
+    return temp == rev;
+}
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (palindrome(num))
+        printf("%d is a Palindrome Number.", num);
+    else
+        printf("%d is not a Palindrome Number.", num);
+
+    return 0;
+}
+
+Output
+Enter a number: 121
+121 is a Palindrome Number.
+
+Q46. Write a program to write a function for Armstrong Number.
+
+Code
+#include <stdio.h>
+
+int armstrong(int n)
+{
+    int temp = n, sum = 0, rem;
+
+    while (n != 0)
+    {
+        rem = n % 10;
+        sum = sum + rem * rem * rem;
+        n = n / 10;
+    }
+
+    return temp == sum;
+}
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (armstrong(num))
+        printf("%d is an Armstrong Number.", num);
+    else
+        printf("%d is not an Armstrong Number.", num);
+
+    return 0;
+}
+
+Output
+Enter a number: 153
+153 is an Armstrong Number.
+
+Q47. Write a program to write a function for Fibonacci Series.
+
+Code
+#include <stdio.h>
+
+void fibonacci(int n)
+{
+    int a = 0, b = 1, c;
+
+    for (int i = 1; i <= n; i++)
+    {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+}
+
+int main()
+{
+    int n;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+    fibonacci(n);
+
+    return 0;
+}
+
+Output
+Enter number of terms: 10
+Fibonacci Series: 0 1 1 2 3 5 8 13 21 34
+
+Q48. Write a program to write a function for Perfect Number.
+
+Code
+#include <stdio.h>
+
+int perfect(int n)
+{
+    int sum = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (n % i == 0)
+            sum += i;
+    }
+
+    return sum == n;
+}
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (perfect(num))
+        printf("%d is a Perfect Number.", num);
+    else
+        printf("%d is not a Perfect Number.", num);
+
+    return 0;
+}
+
+Output
+Enter a number: 28
+28 is a Perfect Number.
