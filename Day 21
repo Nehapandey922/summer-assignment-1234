@@ -1,0 +1,141 @@
+✅ Q81. Find String Length Without strlen()
+Question
+Write a C program to find the length of a string without using the strlen() function.
+
+Code
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int length = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    printf("Length of the string = %d\n", length);
+
+    return 0;
+}
+
+Sample Output
+Enter a string: Hello World
+Length of the string = 1
+Explanation
+The program counts each character until the null character ('\0') is found.
+
+✅ Q82. Reverse a String
+Question
+Write a C program to reverse a string.
+
+Code
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i, length = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    printf("Reversed String: ");
+
+    for (i = length - 1; i >= 0; i--) {
+        printf("%c", str[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+Sample Output
+Enter a string: Programming
+Reversed String: gnimmargorP
+
+Explanation
+The program prints the characters from the last index to the first.
+
+✅ Q83. Count Vowels and Consonants
+Question
+Write a C program to count vowels and consonants in a string.
+
+Code
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0, vowels = 0, consonants = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    while (str[i] != '\0') {
+        char ch = str[i];
+
+        if (ch >= 'A' && ch <= 'Z')
+            ch = ch + 32;
+
+        if (ch >= 'a' && ch <= 'z') {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                vowels++;
+            else
+                consonants++;
+        }
+
+        i++;
+    }
+
+    printf("Vowels = %d\n", vowels);
+    printf("Consonants = %d\n", consonants);
+
+    return 0;
+}
+
+Sample Output
+Enter a string: Hello World
+Vowels = 3
+Consonants = 7
+
+Explanation
+The program checks each alphabet and counts vowels and consonants separately.
+
+✅ Q84. Convert Lowercase to Uppercase
+Question
+Write a C program to convert lowercase letters into uppercase.
+
+Code
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]", str);
+
+    while (str[i] != '\0') {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32;
+        }
+        i++;
+    }
+
+    printf("Uppercase String: %s\n", str);
+
+    return 0;
+}
+
+Sample Output
+Enter a string: hello world
+Uppercase String: HELLO WORLD
+
+Explanation
+Each lowercase letter is converted to uppercase by subtracting 32 from its ASCII value.
