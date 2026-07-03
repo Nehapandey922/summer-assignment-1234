@@ -1,0 +1,134 @@
+hi📌 Q93. Check String Rotation
+Problem Statement
+Write a C program to check whether one string is a rotation of another string.
+
+Algorithm
+Read two strings.
+Check if both have the same length.
+Concatenate the first string with itself.
+Search the second string in the concatenated string.
+If found, print Rotation, otherwise Not Rotation.
+
+C Program
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[100], str2[100], temp[200];
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    if(strlen(str1) != strlen(str2)) {
+        printf("Not Rotation");
+        return 0;
+    }
+
+    strcpy(temp, str1);
+    strcat(temp, str1);
+
+    if(strstr(temp, str2))
+        printf("Rotation");
+    else
+        printf("Not Rotation");
+
+    return 0;
+}
+
+Sample Output
+Enter first string: ABCD
+Enter second string: CDAB
+Rotation
+Time Complexity
+O(n)
+
+📌 Q94. Compress a String
+Problem Statement
+Write a C program to compress a string using character frequency.
+
+Algorithm
+Read a string.
+Count consecutive repeated characters.
+Print character followed by count.
+
+C Program
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, count;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        count = 1;
+        while(str[i] == str[i + 1]) {
+            count++;
+            i++;
+        }
+        printf("%c%d", str[i], count);
+    }
+
+    return 0;
+}
+
+Sample Output
+Enter string: aaabbcccc
+a3b2c4
+Time Complexity
+O(n)
+
+📌 Q95. Find Longest Word
+Problem Statement
+Write a C program to find the longest word in a sentence.
+
+Algorithm
+Read a sentence.
+Traverse each word.
+Store the longest word.
+Display the result.
+
+C Program
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200], longest[100];
+    int i = 0, len = 0, max = 0, start = 0;
+
+    printf("Enter sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    while(1) {
+        if(str[i] == ' ' || str[i] == '\0' || str[i] == '\n') {
+            if(len > max) {
+                max = len;
+                strncpy(longest, &str[start], len);
+                longest[len] = '\0';
+            }
+            if(str[i] == '\0' || str[i] == '\n')
+                break;
+
+            len = 0;
+            start = i + 1;
+        } else {
+            len++;
+        }
+        i++;
+    }
+
+    printf("Longest Word: %s", longest);
+
+    return 0;
+}
+
+Sample Output
+Enter sentence: I love programming language
+Longest Word: programming
+Time Complexity
+O(n)
