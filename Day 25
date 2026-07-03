@@ -1,0 +1,142 @@
+Q97. Merge Two Sorted Arrays
+Problem Statement
+Write a C program to merge two sorted arrays into a single sorted array.
+
+Code
+#include <stdio.h>
+
+int main() {
+    int a[] = {1, 3, 5};
+    int b[] = {2, 4, 6};
+    int c[6];
+    int i = 0, j = 0, k = 0;
+
+    while (i < 3 && j < 3) {
+        if (a[i] < b[j])
+            c[k++] = a[i++];
+        else
+            c[k++] = b[j++];
+    }
+
+    while (i < 3)
+        c[k++] = a[i++];
+
+    while (j < 3)
+        c[k++] = b[j++];
+
+    printf("Merged Array: ");
+    for (i = 0; i < 6; i++)
+        printf("%d ", c[i]);
+
+    return 0;
+}
+
+Output
+Merged Array: 1 2 3 4 5 6
+
+Q98. Find Common Characters in Two Strings
+Problem Statement
+Write a C program to find common characters between two strings.
+
+Code
+#include <stdio.h>
+
+int main() {
+    char s1[] = "apple";
+    char s2[] = "grape";
+    int i, j;
+
+    printf("Common Characters: ");
+
+    for (i = 0; s1[i] != '\0'; i++) {
+        for (j = 0; s2[j] != '\0'; j++) {
+            if (s1[i] == s2[j]) {
+                printf("%c ", s1[i]);
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
+
+Output
+Common Characters: a p e
+
+Q99. Sort Names Alphabetically
+Problem Statement
+Write a C program to sort names alphabetically.
+
+Code
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char names[5][20] = {"Riya", "Ankit", "Neha", "Karan", "Aman"};
+    char temp[20];
+    int i, j;
+
+    for (i = 0; i < 5; i++) {
+        for (j = i + 1; j < 5; j++) {
+            if (strcmp(names[i], names[j]) > 0) {
+                strcpy(temp, names[i]);
+                strcpy(names[i], names[j]);
+                strcpy(names[j], temp);
+            }
+        }
+    }
+
+    printf("Sorted Names:\n");
+
+    for (i = 0; i < 5; i++)
+        printf("%s\n", names[i]);
+
+    return 0;
+}
+
+Output
+Sorted Names:
+Aman
+Ankit
+Karan
+Neha
+Riya
+
+Q100. Sort Words by Length
+Problem Statement
+Write a C program to sort words according to their lengthe
+
+Code
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char words[5][20] = {"Apple", "Cat", "Elephant", "Dog", "Ball"};
+    char temp[20];
+    int i, j;
+
+    for (i = 0; i < 5; i++) {
+        for (j = i + 1; j < 5; j++) {
+            if (strlen(words[i]) > strlen(words[j])) {
+                strcpy(temp, words[i]);
+                strcpy(words[i], words[j]);
+                strcpy(words[j], temp);
+            }
+        }
+    }
+
+    printf("Words Sorted by Length:\n");
+
+    for (i = 0; i < 5; i++)
+        printf("%s\n", words[i]);
+
+    return 0;
+}
+
+Output
+Words Sorted by Length:
+Cat
+Dog
+Ball
+Apple
+Elephant
