@@ -1,0 +1,179 @@
+Q109. Library Management System
+Problem Statement
+Write a C program to create a simple Library Management System that stores book details and displays them.
+
+Code
+#include <stdio.h>
+
+struct Library
+{
+    int bookId;
+    char bookName[50];
+    char author[50];
+};
+
+int main()
+{
+    struct Library b;
+
+    printf("Enter Book ID: ");
+    scanf("%d", &b.bookId);
+
+    printf("Enter Book Name: ");
+    scanf(" %[^\n]", b.bookName);
+
+    printf("Enter Author Name: ");
+    scanf(" %[^\n]", b.author);
+
+    printf("\n----- Library Record -----\n");
+    printf("Book ID      : %d\n", b.bookId);
+    printf("Book Name    : %s\n", b.bookName);
+    printf("Author Name  : %s\n", b.author);
+
+    return 0;
+}
+
+Sample Output
+Enter Book ID: 101
+Enter Book Name: C Programming
+Enter Author Name: Dennis Ritchie
+
+----- Library Record -----
+Book ID      : 101
+Book Name    : C Programming
+Author Name  : Dennis Ritchie
+
+📌 Q110. Bank Account System
+Problem Statement
+Write a C program to create a Bank Account System that stores customer details and account balance.
+
+Code
+#include <stdio.h>
+
+struct Bank
+{
+    int accountNo;
+    char name[50];
+    float balance;
+};
+
+int main()
+{
+    struct Bank c;
+
+    printf("Enter Account Number: ");
+    scanf("%d", &c.accountNo);
+
+    printf("Enter Customer Name: ");
+    scanf(" %[^\n]", c.name);
+
+    printf("Enter Balance: ");
+    scanf("%f", &c.balance);
+
+    printf("\n----- Bank Details -----\n");
+    printf("Account No : %d\n", c.accountNo);
+    printf("Name       : %s\n", c.name);
+    printf("Balance    : %.2f\n", c.balance);
+
+    return 0;
+}
+
+Sample Output
+Enter Account Number: 12345
+Enter Customer Name: Neha Pandey
+Enter Balance: 50000
+
+----- Bank Details -----
+Account No : 12345
+Name       : Neha Pandey
+Balance    : 50000.00
+
+📌 Q111. Ticket Booking System
+Problem Statement
+Write a C program to create a Ticket Booking System that stores passenger details.
+
+Code
+#include <stdio.h>
+
+struct Ticket
+{
+    char passenger[50];
+    int seatNo;
+    char destination[50];
+};
+
+int main()
+{
+    struct Ticket t;
+
+    printf("Enter Passenger Name: ");
+    scanf(" %[^\n]", t.passenger);
+
+    printf("Enter Seat Number: ");
+    scanf("%d", &t.seatNo);
+
+    printf("Enter Destination: ");
+    scanf(" %[^\n]", t.destination);
+
+    printf("\n----- Ticket Details -----\n");
+    printf("Passenger  : %s\n", t.passenger);
+    printf("Seat No    : %d\n", t.seatNo);
+    printf("Destination: %s\n", t.destination);
+
+    return 0;
+}
+
+Sample Output
+Enter Passenger Name: Neha Pandey
+Enter Seat Number: 15
+Enter Destination: Delhi
+
+----- Ticket Details -----
+Passenger  : Neha Pandey
+Seat No    : 15
+Destination: Delhi
+
+📌 Q112. Contact Management System
+Problem Statement
+Write a C program to create a Contact Management System that stores contact details.
+
+Code
+#include <stdio.h>
+
+struct Contact
+{
+    char name[50];
+    char phone[15];
+    char email[50];
+};
+
+int main()
+{
+    struct Contact c;
+
+    printf("Enter Name: ");
+    scanf(" %[^\n]", c.name);
+
+    printf("Enter Phone Number: ");
+    scanf("%s", c.phone);
+
+    printf("Enter Email: ");
+    scanf("%s", c.email);
+
+    printf("\n----- Contact Details -----\n");
+    printf("Name  : %s\n", c.name);
+    printf("Phone : %s\n", c.phone);
+    printf("Email : %s\n", c.email);
+
+    return 0;
+}
+
+Sample Output
+Enter Name: Neha Pandey
+Enter Phone Number: 9876543210
+Enter Email: neha@gmail.com
+
+----- Contact Details -----
+Name  : Neha Pandey
+Phone : 9876543210
+Email : neha@gmail.com
