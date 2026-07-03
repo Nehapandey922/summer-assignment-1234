@@ -1,0 +1,171 @@
+Q101. Number Guessing Game
+📝 Problem Statement
+Write a C program to create a Number Guessing Game.
+
+💻 Code
+#include <stdio.h>
+
+int main() {
+    int secret = 25, guess;
+
+    printf("===== Number Guessing Game =====\n");
+
+    do {
+        printf("Enter your guess: ");
+        scanf("%d", &guess);
+
+        if (guess > secret)
+            printf("Too High!\n");
+        else if (guess < secret)
+            printf("Too Low!\n");
+        else
+            printf("Congratulations! You guessed correctly.\n");
+
+    } while (guess != secret);
+
+    return 0;
+}
+
+▶️ Sample Output
+===== Number Guessing Game =====
+Enter your guess: 10
+Too Low!
+
+Enter your guess: 40
+Too High!
+
+Enter your guess: 25
+Congratulations! You guessed correctly.
+
+Q102. Voting Eligibility System
+📝 Problem Statement
+Write a C program to check whether a person is eligible to vote.
+
+💻 Code
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >= 18)
+        printf("Eligible to Vote.");
+    else
+        printf("Not Eligible to Vote.");
+
+    return 0;
+}
+
+▶️ Sample Output
+Enter your age: 20
+Eligible to Vote.
+
+Q103. ATM Simulation
+📝 Problem Statement
+Write a C program to simulate basic ATM operations.
+
+💻 Code
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float balance = 10000, amount;
+
+    printf("===== ATM MENU =====\n");
+    printf("1. Check Balance\n");
+    printf("2. Deposit\n");
+    printf("3. Withdraw\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Balance = %.2f\n", balance);
+            break;
+
+        case 2:
+            printf("Enter amount to deposit: ");
+            scanf("%f", &amount);
+            balance += amount;
+            printf("Updated Balance = %.2f\n", balance);
+            break;
+
+        case 3:
+            printf("Enter amount to withdraw: ");
+            scanf("%f", &amount);
+
+            if(amount <= balance) {
+                balance -= amount;
+                printf("Updated Balance = %.2f\n", balance);
+            } else {
+                printf("Insufficient Balance\n");
+            }
+            break;
+
+        default:
+            printf("Invalid Choice");
+    }
+
+    return 0;
+}
+
+▶️ Sample Output
+===== ATM MENU =====
+1. Check Balance
+2. Deposit
+3. Withdraw
+Enter your choice: 3
+Enter amount to withdraw: 2500
+Updated Balance = 7500.00
+
+Q104. Quiz Application
+📝 Problem Statement
+Write a C program to create a simple Quiz Application.
+
+💻 Code
+#include <stdio.h>
+
+int main() {
+    int ans, score = 0;
+
+    printf("===== Simple Quiz =====\n");
+
+    printf("\n1. Capital of India?\n");
+    printf("1. Mumbai\n2. Delhi\n3. Kolkata\n4. Chennai\n");
+    scanf("%d", &ans);
+
+    if(ans == 2)
+        score++;
+
+    printf("\n2. C language was developed by?\n");
+    printf("1. Dennis Ritchie\n2. James Gosling\n3. Bjarne Stroustrup\n4. Guido van Rossum\n");
+    scanf("%d", &ans);
+
+    if(ans == 1)
+        score++;
+
+    printf("\nYour Score = %d/2\n", score);
+
+    return 0;
+}
+
+▶️ Sample Output
+===== Simple Quiz =====
+
+1. Capital of India?
+1. Mumbai
+2. Delhi
+3. Kolkata
+4. Chennai
+2
+
+2. C language was developed by?
+1. Dennis Ritchie
+2. James Gosling
+3. Bjarne Stroustrup
+4. Guido van Rossum
+1
+
+Your Score = 2/2
