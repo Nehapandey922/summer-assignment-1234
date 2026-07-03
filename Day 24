@@ -1,0 +1,164 @@
+Q93. Check String Rotation
+Problem Statement
+Write a C program to check whether one string is a rotation of another string.
+
+Code
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[100], str2[100], temp[200];
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    if(strlen(str1) != strlen(str2))
+    {
+        printf("Not Rotation");
+        return 0;
+    }
+
+    strcpy(temp, str1);
+    strcat(temp, str1);
+
+    if(strstr(temp, str2))
+        printf("Rotation");
+    else
+        printf("Not Rotation");
+
+    return 0;
+}
+
+Sample Output
+Enter first string: ABCD
+Enter second string: CDAB
+Rotation
+
+Q94. Compress a String
+Problem Statement
+Write a C program to compress a string using character frequency.
+
+Code
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[100];
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    int len = strlen(str);
+
+    for(int i = 0; i < len; i++)
+    {
+        int count = 1;
+
+        while(i < len - 1 && str[i] == str[i + 1])
+        {
+            count++;
+            i++;
+        }
+
+        printf("%c%d", str[i], count);
+    }
+
+    return 0;
+}
+
+Sample Output
+Enter string: aaabbccccd
+a3b2c4d1
+
+Q95. Find Longest Word
+Problem Statement
+Write a C program to find the longest word in a sentence.
+
+Code
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[200], longest[100];
+    int max = 0, start = 0;
+
+    printf("Enter a sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    int len = strlen(str);
+
+    for(int i = 0; i <= len; i++)
+    {
+        if(str[i] == ' ' || str[i] == '\0' || str[i] == '\n')
+        {
+            int wordLen = i - start;
+
+            if(wordLen > max)
+            {
+                max = wordLen;
+                strncpy(longest, &str[start], wordLen);
+                longest[wordLen] = '\0';
+            }
+
+            start = i + 1;
+        }
+    }
+
+    printf("Longest Word = %s", longest);
+
+    return 0;
+}
+
+Sample Output
+Enter a sentence: C programming is interesting
+Longest Word = programming
+
+Q96. Remove Duplicate Characters
+Problem Statement
+Write a C program to remove duplicate characters from a string.
+
+Code
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[100];
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    int len = strlen(str);
+
+    for(int i = 0; i < len; i++)
+    {
+        for(int j = i + 1; j < len;)
+        {
+            if(str[i] == str[j])
+            {
+                for(int k = j; k < len; k++)
+                    str[k] = str[k + 1];
+
+                len--;
+            }
+            else
+            {
+                j++;
+            }
+        }
+    }
+
+    printf("After Removing Duplicates = %s", str);
+
+    return 0;
+}
+
+Sample Output
+Enter string: programming
+After Removing Duplicates = progamin
