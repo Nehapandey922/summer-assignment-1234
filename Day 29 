@@ -1,0 +1,132 @@
+Q114
+Menu-Driven Array Operations System
+Problem Statement
+Write a C program to perform the following array operations using a menu:
+Display Array
+Find Maximum
+Find Minimum
+Calculate Sum
+Calculate Average
+Exit
+
+Code (Q114_Array_Operations_System.c)
+#include <stdio.h>
+
+int main()
+{
+    int arr[100], n, i;
+    int choice;
+    int max, min, sum = 0;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    while (1)
+    {
+        printf("\n========== ARRAY OPERATIONS ==========\n");
+        printf("1. Display Array\n");
+        printf("2. Find Maximum\n");
+        printf("3. Find Minimum\n");
+        printf("4. Find Sum\n");
+        printf("5. Find Average\n");
+        printf("6. Exit\n");
+
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+        case 1:
+            printf("Array Elements: ");
+            for (i = 0; i < n; i++)
+                printf("%d ", arr[i]);
+            printf("\n");
+            break;
+
+        case 2:
+            max = arr[0];
+            for (i = 1; i < n; i++)
+                if (arr[i] > max)
+                    max = arr[i];
+
+            printf("Maximum = %d\n", max);
+            break;
+
+        case 3:
+            min = arr[0];
+            for (i = 1; i < n; i++)
+                if (arr[i] < min)
+                    min = arr[i];
+
+            printf("Minimum = %d\n", min);
+            break;
+
+        case 4:
+            sum = 0;
+            for (i = 0; i < n; i++)
+                sum += arr[i];
+
+            printf("Sum = %d\n", sum);
+            break;
+
+        case 5:
+            sum = 0;
+            for (i = 0; i < n; i++)
+                sum += arr[i];
+
+            printf("Average = %.2f\n", (float)sum / n);
+            break;
+
+        case 6:
+            printf("Program Closed Successfully!\n");
+            return 0;
+
+        default:
+            printf("Invalid Choice!\n");
+        }
+    }
+
+    return 0;
+}
+
+Sample Output
+Enter number of elements: 5
+
+Enter array elements:
+10
+20
+30
+40
+50
+
+========== ARRAY OPERATIONS ==========
+1. Display Array
+2. Find Maximum
+3. Find Minimum
+4. Find Sum
+5. Find Average
+6. Exit
+
+Enter your choice: 1
+
+Array Elements:
+10 20 30 40 50
+
+Enter your choice: 4
+
+Sum = 150
+
+Enter your choice: 5
+
+Average = 30.00
+
+Enter your choice: 6
+
+Program Closed Successfully!
