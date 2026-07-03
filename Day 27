@@ -1,0 +1,189 @@
+Q105. Create Student Record Management System
+Problem Statement
+Write a C program to create a Student Record Management System that stores and displays student details.
+
+Code
+#include <stdio.h>
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &s.roll);
+
+    printf("Enter Name: ");
+    scanf("%s", s.name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &s.marks);
+
+    printf("\n----- Student Record -----\n");
+    printf("Roll Number : %d\n", s.roll);
+    printf("Name        : %s\n", s.name);
+    printf("Marks       : %.2f\n", s.marks);
+
+    return 0;
+}
+
+Sample Output
+Enter Roll Number: 101
+Enter Name: Neha
+Enter Marks: 92.5
+
+----- Student Record -----
+Roll Number : 101
+Name        : Neha
+Marks       : 92.50
+
+Explanation
+Uses structure to store student details.
+Takes input and displays the record.
+
+Q106. Create Employee Management System
+Problem Statement
+Write a C program to store and display employee details.
+
+Code
+#include <stdio.h>
+
+struct Employee
+{
+    int id;
+    char name[50];
+    float salary;
+};
+
+int main()
+{
+    struct Employee e;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &e.id);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", e.name);
+
+    printf("Enter Salary: ");
+    scanf("%f", &e.salary);
+
+    printf("\n----- Employee Details -----\n");
+    printf("ID      : %d\n", e.id);
+    printf("Name    : %s\n", e.name);
+    printf("Salary  : %.2f\n", e.salary);
+
+    return 0;
+}
+
+Sample Output
+Enter Employee ID: 201
+Enter Employee Name: Amit
+Enter Salary: 45000
+
+----- Employee Details -----
+ID      : 201
+Name    : Amit
+Salary  : 45000.00
+
+Explanation
+Uses structure to manage employee information.
+Displays employee details after input.
+
+Q107. Create Salary Management System
+Problem Statement
+Write a C program to calculate net salary after adding HRA and DA.
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    float basic, hra, da, netSalary;
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    hra = basic * 0.20;
+    da = basic * 0.10;
+    netSalary = basic + hra + da;
+
+    printf("\n----- Salary Details -----\n");
+    printf("Basic Salary : %.2f\n", basic);
+    printf("HRA          : %.2f\n", hra);
+    printf("DA           : %.2f\n", da);
+    printf("Net Salary   : %.2f\n", netSalary);
+
+    return 0;
+}
+
+Sample Output
+Enter Basic Salary: 30000
+
+----- Salary Details -----
+Basic Salary : 30000.00
+HRA          : 6000.00
+DA           : 3000.00
+Net Salary   : 39000.00
+
+Explanation
+Calculates HRA as 20%.
+Calculates DA as 10%.
+Displays total salary.
+
+Q108. Create Marksheet Generation System
+Problem Statement
+Write a C program to generate a marksheet with total, percentage, and grade.
+
+Code
+#include <stdio.h>
+
+int main()
+{
+    int m1, m2, m3, total;
+    float percentage;
+    char grade;
+
+    printf("Enter marks of 3 subjects: ");
+    scanf("%d%d%d", &m1, &m2, &m3);
+
+    total = m1 + m2 + m3;
+    percentage = total / 3.0;
+
+    if (percentage >= 90)
+        grade = 'A';
+    else if (percentage >= 75)
+        grade = 'B';
+    else if (percentage >= 60)
+        grade = 'C';
+    else if (percentage >= 40)
+        grade = 'D';
+    else
+        grade = 'F';
+
+    printf("\n----- Marksheet -----\n");
+    printf("Total      : %d\n", total);
+    printf("Percentage : %.2f\n", percentage);
+    printf("Grade      : %c\n", grade);
+
+    return 0;
+}
+
+Sample Output
+Enter marks of 3 subjects: 85 90 95
+
+----- Marksheet -----
+Total      : 270
+Percentage : 90.00
+Grade      : A
+
+Explanation
+Calculates total and percentage.
+Assigns grade using if-else conditions.
+Displays the final marksheet.
