@@ -1,0 +1,224 @@
+Q117 – Student Record System
+📖 Problem Statement
+Write a program to store and display student details using arrays and strings.
+
+💻 Code
+#include <stdio.h>
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main()
+{
+    struct Student s[3];
+    int i;
+
+    for(i=0;i<3;i++)
+    {
+        printf("Enter Roll No, Name and Marks: ");
+        scanf("%d %s %f",&s[i].roll,s[i].name,&s[i].marks);
+    }
+
+    printf("\nStudent Records\n");
+
+    for(i=0;i<3;i++)
+    {
+        printf("Roll: %d\n",s[i].roll);
+        printf("Name: %s\n",s[i].name);
+        printf("Marks: %.2f\n\n",s[i].marks);
+    }
+
+    return 0;
+}
+
+🖥️ Output
+Enter Roll No, Name and Marks: 101 Rahul 88.5
+Enter Roll No, Name and Marks: 102 Aman 79.0
+Enter Roll No, Name and Marks: 103 Neha 92.5
+
+Student Records
+Roll: 101
+Name: Rahul
+Marks: 88.50
+
+Roll: 102
+Name: Aman
+Marks: 79.00
+
+Roll: 103
+Name: Neha
+Marks: 92.50
+
+Q118 – Mini Library System
+📖 Problem Statement
+Create a simple library system to store book details.
+
+💻 Code
+#include <stdio.h>
+
+struct Book
+{
+    int id;
+    char name[50];
+};
+
+int main()
+{
+    struct Book b[3];
+    int i;
+
+    for(i=0;i<3;i++)
+    {
+        printf("Enter Book ID and Name: ");
+        scanf("%d %s",&b[i].id,b[i].name);
+    }
+
+    printf("\nLibrary Records\n");
+
+    for(i=0;i<3;i++)
+    {
+        printf("Book ID: %d\n",b[i].id);
+        printf("Book Name: %s\n\n",b[i].name);
+    }
+
+    return 0;
+}
+
+🖥️ Output
+Enter Book ID and Name: 1 CProgramming
+Enter Book ID and Name: 2 Java
+Enter Book ID and Name: 3 Python
+
+Library Records
+Book ID: 1
+Book Name: CProgramming
+
+Book ID: 2
+Book Name: Java
+
+Book ID: 3
+Book Name: Python
+
+Q119 – Mini Employee Management System
+📖 Problem Statement
+Create a program to store employee information.
+
+💻 Code
+#include <stdio.h>
+
+struct Employee
+{
+    int id;
+    char name[50];
+    float salary;
+};
+
+int main()
+{
+    struct Employee e[3];
+    int i;
+
+    for(i=0;i<3;i++)
+    {
+        printf("Enter Employee ID, Name and Salary: ");
+        scanf("%d %s %f",&e[i].id,e[i].name,&e[i].salary);
+    }
+
+    printf("\nEmployee Records\n");
+
+    for(i=0;i<3;i++)
+    {
+        printf("ID: %d\n",e[i].id);
+        printf("Name: %s\n",e[i].name);
+        printf("Salary: %.2f\n\n",e[i].salary);
+    }
+
+    return 0;
+}
+
+🖥️ Output
+Enter Employee ID, Name and Salary: 1 Rahul 25000
+Enter Employee ID, Name and Salary: 2 Neha 30000
+Enter Employee ID, Name and Salary: 3 Aman 28000
+
+Employee Records
+ID: 1
+Name: Rahul
+Salary: 25000.00
+
+ID: 2
+Name: Neha
+Salary: 30000.00
+
+ID: 3
+Name: Aman
+Salary: 28000.00
+
+Q120 – Complete Mini Project (Student Management System)
+📖 Problem Statement
+Develop a mini project using arrays, strings, structures and functions.
+
+💻 Code
+#include <stdio.h>
+
+struct Student
+{
+    int roll;
+    char name[50];
+    float marks;
+};
+
+void display(struct Student s[], int n)
+{
+    int i;
+
+    printf("\nStudent Details\n");
+
+    for(i=0;i<n;i++)
+    {
+        printf("Roll No : %d\n",s[i].roll);
+        printf("Name     : %s\n",s[i].name);
+        printf("Marks    : %.2f\n\n",s[i].marks);
+    }
+}
+
+int main()
+{
+    int n=3, i;
+    struct Student s[3];
+
+    for(i=0;i<n;i++)
+    {
+        printf("Enter Roll, Name and Marks: ");
+        scanf("%d %s %f",
+              &s[i].roll,
+              s[i].name,
+              &s[i].marks);
+    }
+
+    display(s,n);
+
+    return 0;
+}
+
+🖥️ Output
+Enter Roll, Name and Marks: 101 Rahul 85
+Enter Roll, Name and Marks: 102 Neha 91
+Enter Roll, Name and Marks: 103 Aman 78
+
+Student Details
+Roll No : 101
+Name     : Rahul
+Marks    : 85.00
+
+Roll No : 102
+Name     : Neha
+Marks    : 91.00
+
+Roll No : 103
+Name     : Aman
+Marks    : 78.00
