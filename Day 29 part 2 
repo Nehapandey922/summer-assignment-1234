@@ -1,0 +1,224 @@
+Develop a Menu-Driven Inventory Management System in C to manage product details such as:
+
+Add Product
+Display Products
+Search Product
+Update Quantity
+Delete Product
+Exit Program
+
+💻 C Program
+#include <stdio.h>
+#include <string.h>
+
+struct Product
+{
+    int id;
+    char name[50];
+    int quantity;
+    float price;
+};
+
+struct Product p[100];
+int count = 0;
+
+// Add Product
+void addProduct()
+{
+    printf("\nEnter Product ID: ");
+    scanf("%d", &p[count].id);
+
+    printf("Enter Product Name: ");
+    scanf("%s", p[count].name);
+
+    printf("Enter Quantity: ");
+    scanf("%d", &p[count].quantity);
+
+    printf("Enter Price: ");
+    scanf("%f", &p[count].price);
+
+    count++;
+    printf("\nProduct Added Successfully!\n");
+}
+
+// Display Products
+void displayProduct()
+{
+    int i;
+
+    if (count == 0)
+    {
+        printf("\nNo Products Available!\n");
+        return;
+    }
+
+    printf("\nID\tName\tQuantity\tPrice\n");
+
+    for (i = 0; i < count; i++)
+    {
+        printf("%d\t%s\t%d\t\t%.2f\n",
+               p[i].id,
+               p[i].name,
+               p[i].quantity,
+               p[i].price);
+    }
+}
+
+// Search Product
+void searchProduct()
+{
+    int id, i, found = 0;
+
+    printf("\nEnter Product ID to Search: ");
+    scanf("%d", &id);
+
+    for (i = 0; i < count; i++)
+    {
+        if (p[i].id == id)
+        {
+            printf("\nProduct Found!\n");
+            printf("Name      : %s\n", p[i].name);
+            printf("Quantity  : %d\n", p[i].quantity);
+            printf("Price     : %.2f\n", p[i].price);
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found)
+        printf("\nProduct Not Found!\n");
+}
+
+// Update Quantity
+void updateProduct()
+{
+    int id, qty, i;
+
+    printf("\nEnter Product ID: ");
+    scanf("%d", &id);
+
+    for (i = 0; i < count; i++)
+    {
+        if (p[i].id == id)
+        {
+            printf("Enter New Quantity: ");
+            scanf("%d", &qty);
+
+            p[i].quantity = qty;
+
+            printf("\nQuantity Updated Successfully!\n");
+            return;
+        }
+    }
+
+    printf("\nProduct Not Found!\n");
+}
+
+// Delete Product
+void deleteProduct()
+{
+    int id, i, j;
+
+    printf("\nEnter Product ID to Delete: ");
+    scanf("%d", &id);
+
+    for (i = 0; i < count; i++)
+    {
+        if (p[i].id == id)
+        {
+            for (j = i; j < count - 1; j++)
+            {
+                p[j] = p[j + 1];
+            }
+
+            count--;
+            printf("\nProduct Deleted Successfully!\n");
+            return;
+        }
+    }
+
+    printf("\nProduct Not Found!\n");
+}
+
+int main()
+{
+    int choice;
+
+    do
+    {
+        printf("\n===== INVENTORY MANAGEMENT SYSTEM =====\n");
+        printf("1. Add Product\n");
+        printf("2. Display Products\n");
+        printf("3. Search Product\n");
+        printf("4. Update Quantity\n");
+        printf("5. Delete Product\n");
+        printf("6. Exit\n");
+
+        printf("Enter Choice: ");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+        case 1:
+            addProduct();
+            break;
+
+        case 2:
+            displayProduct();
+            break;
+
+        case 3:
+            searchProduct();
+            break;
+
+        case 4:
+            updateProduct();
+            break;
+
+        case 5:
+            deleteProduct();
+            break;
+
+        case 6:
+            printf("\nExiting Program...\n");
+            break;
+
+        default:
+            printf("\nInvalid Choice!\n");
+        }
+
+    } while (choice != 6);
+
+    return 0;
+}
+
+▶️ Sample Output
+===== INVENTORY MANAGEMENT SYSTEM =====
+1. Add Product
+2. Display Products
+3. Search Product
+4. Update Quantity
+5. Delete Product
+6. Exit
+
+Enter Choice: 1
+
+Enter Product ID: 101
+Enter Product Name: Laptop
+Enter Quantity: 5
+Enter Price: 55000
+
+Product Added Successfully!
+
+Enter Choice: 2
+
+ID      Name      Quantity      Price
+101     Laptop    5             55000.00
+
+Enter Choice: 3
+Enter Product ID to Search: 101
+
+Product Found!
+Name      : Laptop
+Quantity  : 5
+Price     : 55000.00
