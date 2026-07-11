@@ -1,0 +1,127 @@
+Write a program to Create Menu-Driven String Operations System.
+
+Operations:
+Find Length of String
+Copy String
+Concatenate Strings
+Compare Strings
+Reverse String
+Exit
+
+💻 C Program
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[100], str2[100], temp[100];
+    int choice;
+
+    do
+    {
+        printf("\n===== STRING OPERATIONS MENU =====\n");
+        printf("1. Find Length\n");
+        printf("2. Copy String\n");
+        printf("3. Concatenate Strings\n");
+        printf("4. Compare Strings\n");
+        printf("5. Reverse String\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice)
+        {
+            case 1:
+                printf("Enter a string: ");
+                scanf("%s", str1);
+
+                printf("Length of string = %lu\n",
+                       strlen(str1));
+                break;
+
+            case 2:
+                printf("Enter a string: ");
+                scanf("%s", str1);
+
+                strcpy(temp, str1);
+
+                printf("Copied String = %s\n", temp);
+                break;
+
+            case 3:
+                printf("Enter first string: ");
+                scanf("%s", str1);
+
+                printf("Enter second string: ");
+                scanf("%s", str2);
+
+                strcat(str1, str2);
+
+                printf("Concatenated String = %s\n", str1);
+                break;
+
+            case 4:
+                printf("Enter first string: ");
+                scanf("%s", str1);
+
+                printf("Enter second string: ");
+                scanf("%s", str2);
+
+                if(strcmp(str1, str2) == 0)
+                    printf("Strings are Equal\n");
+                else
+                    printf("Strings are Not Equal\n");
+
+                break;
+
+            case 5:
+                printf("Enter a string: ");
+                scanf("%s", str1);
+
+                strcpy(temp, str1);
+                strrev(temp);
+
+                printf("Reversed String = %s\n", temp);
+                break;
+
+            case 6:
+                printf("Exiting Program...\n");
+                break;
+
+            default:
+                printf("Invalid Choice!\n");
+        }
+
+    } while(choice != 6);
+
+    return 0;
+}
+
+🖥️ Sample Output
+===== STRING OPERATIONS MENU =====
+1. Find Length
+2. Copy String
+3. Concatenate Strings
+4. Compare Strings
+5. Reverse String
+6. Exit
+Enter your choice: 1
+
+Enter a string: GitHub
+Length of string = 6
+
+
+===== STRING OPERATIONS MENU =====
+Enter your choice: 3
+
+Enter first string: Hello
+Enter second string: World
+Concatenated String = HelloWorld
+
+
+===== STRING OPERATIONS MENU =====
+Enter your choice: 4
+
+Enter first string: CSE
+Enter second string: CSE
+Strings are Equal
