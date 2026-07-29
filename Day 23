@@ -1,4 +1,4 @@
-hi📌 Q93. Check String Rotation
+ Q93. Check String Rotation
 Problem Statement
 Write a C program to check whether one string is a rotation of another string.
 
@@ -45,7 +45,7 @@ Rotation
 Time Complexity
 O(n)
 
-📌 Q94. Compress a String
+ Q94. Compress a String
 Problem Statement
 Write a C program to compress a string using character frequency.
 
@@ -83,7 +83,7 @@ a3b2c4
 Time Complexity
 O(n)
 
-📌 Q95. Find Longest Word
+Q95. Find Longest Word
 Problem Statement
 Write a C program to find the longest word in a sentence.
 
