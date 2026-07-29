@@ -1,6 +1,6 @@
 Q73. Write a program to Add Two Matrices.
 
-💻 Code
+Code
 #include <stdio.h>
 
 int main() {
