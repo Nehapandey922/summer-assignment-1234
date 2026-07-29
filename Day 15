@@ -1,4 +1,4 @@
-📌 Q57. Write a Program to Reverse an Array
+ Q57. Write a Program to Reverse an Array
 Problem Statement
 Write a C program to reverse the elements of an array.
 
@@ -41,7 +41,7 @@ Read the array.
 Swap the first and last elements until the middle is reached.
 Print the reversed array.
 
-📌 Q58. Write a Program to Rotate Array Left
+Q58. Write a Program to Rotate Array Left
 Problem Statement
 Write a C program to rotate an array one position to the left.
 
@@ -88,7 +88,7 @@ Store the first element.
 Shift every element one position to the left.
 Place the first element at the end.
 
-📌 Q59. Write a Program to Rotate Array Right
+ Q59. Write a Program to Rotate Array Right
 Problem Statement
 Write a C program to rotate an array one position to the right.
 
@@ -135,7 +135,7 @@ Store the last element.
 Shift all elements one position to the right.
 Place the last element at the beginning.
 
-📌 Q60. Write a Program to Move All Zeroes to the End
+ Q60. Write a Program to Move All Zeroes to the End
 Problem Statement
 Write a C program to move all zeroes in an array to the end while maintaining the order of non-zero elements.
 
