@@ -1,8 +1,8 @@
 Q101. Number Guessing Game
-📝 Problem Statement
+Problem Statement
 Write a C program to create a Number Guessing Game.
 
-💻 Code
+Code
 #include <stdio.h>
 
 int main() {
@@ -26,7 +26,7 @@ int main() {
     return 0;
 }
 
-▶️ Sample Output
+Sample Output
 ===== Number Guessing Game =====
 Enter your guess: 10
 Too Low!
@@ -38,10 +38,10 @@ Enter your guess: 25
 Congratulations! You guessed correctly.
 
 Q102. Voting Eligibility System
-📝 Problem Statement
+Problem Statement
 Write a C program to check whether a person is eligible to vote.
 
-💻 Code
+ Code
 #include <stdio.h>
 
 int main() {
@@ -58,15 +58,15 @@ int main() {
     return 0;
 }
 
-▶️ Sample Output
+ Sample Output
 Enter your age: 20
 Eligible to Vote.
 
 Q103. ATM Simulation
-📝 Problem Statement
+Problem Statement
 Write a C program to simulate basic ATM operations.
 
-💻 Code
+Code
 #include <stdio.h>
 
 int main() {
@@ -111,7 +111,7 @@ int main() {
     return 0;
 }
 
-▶️ Sample Output
+ Sample Output
 ===== ATM MENU =====
 1. Check Balance
 2. Deposit
@@ -121,10 +121,10 @@ Enter amount to withdraw: 2500
 Updated Balance = 7500.00
 
 Q104. Quiz Application
-📝 Problem Statement
+Problem Statement
 Write a C program to create a simple Quiz Application.
 
-💻 Code
+ Code
 #include <stdio.h>
 
 int main() {
@@ -151,7 +151,7 @@ int main() {
     return 0;
 }
 
-▶️ Sample Output
+Sample Output
 ===== Simple Quiz =====
 
 1. Capital of India?
