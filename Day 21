@@ -1,4 +1,4 @@
-✅ Q81. Find String Length Without strlen()
+Q81. Find String Length Without strlen()
 Question
 Write a C program to find the length of a string without using the strlen() function.
 
@@ -27,7 +27,7 @@ Length of the string = 1
 Explanation
 The program counts each character until the null character ('\0') is found.
 
-✅ Q82. Reverse a String
+ Q82. Reverse a String
 Question
 Write a C program to reverse a string.
 
@@ -63,7 +63,7 @@ Reversed String: gnimmargorP
 Explanation
 The program prints the characters from the last index to the first.
 
-✅ Q83. Count Vowels and Consonants
+ Q83. Count Vowels and Consonants
 Question
 Write a C program to count vowels and consonants in a string.
 
@@ -107,7 +107,7 @@ Consonants = 7
 Explanation
 The program checks each alphabet and counts vowels and consonants separately.
 
-✅ Q84. Convert Lowercase to Uppercase
+ Q84. Convert Lowercase to Uppercase
 Question
 Write a C program to convert lowercase letters into uppercase.
 
