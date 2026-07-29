@@ -7,7 +7,7 @@ Update Quantity
 Delete Product
 Exit Program
 
-💻 C Program
+ C Program
 #include <stdio.h>
 #include <string.h>
 
@@ -192,7 +192,7 @@ int main()
     return 0;
 }
 
-▶️ Sample Output
+Sample Output
 ===== INVENTORY MANAGEMENT SYSTEM =====
 1. Add Product
 2. Display Products
