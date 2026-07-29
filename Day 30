@@ -1,8 +1,8 @@
 Q117 – Student Record System
-📖 Problem Statement
+Problem Statement
 Write a program to store and display student details using arrays and strings.
 
-💻 Code
+Code
 #include <stdio.h>
 
 struct Student
@@ -35,7 +35,7 @@ int main()
     return 0;
 }
 
-🖥️ Output
+Output
 Enter Roll No, Name and Marks: 101 Rahul 88.5
 Enter Roll No, Name and Marks: 102 Aman 79.0
 Enter Roll No, Name and Marks: 103 Neha 92.5
@@ -54,10 +54,10 @@ Name: Neha
 Marks: 92.50
 
 Q118 – Mini Library System
-📖 Problem Statement
+ Problem Statement
 Create a simple library system to store book details.
 
-💻 Code
+Code
 #include <stdio.h>
 
 struct Book
@@ -88,7 +88,7 @@ int main()
     return 0;
 }
 
-🖥️ Output
+Output
 Enter Book ID and Name: 1 CProgramming
 Enter Book ID and Name: 2 Java
 Enter Book ID and Name: 3 Python
@@ -104,10 +104,10 @@ Book ID: 3
 Book Name: Python
 
 Q119 – Mini Employee Management System
-📖 Problem Statement
+ Problem Statement
 Create a program to store employee information.
 
-💻 Code
+ Code
 #include <stdio.h>
 
 struct Employee
@@ -140,7 +140,7 @@ int main()
     return 0;
 }
 
-🖥️ Output
+ Output
 Enter Employee ID, Name and Salary: 1 Rahul 25000
 Enter Employee ID, Name and Salary: 2 Neha 30000
 Enter Employee ID, Name and Salary: 3 Aman 28000
@@ -159,10 +159,10 @@ Name: Aman
 Salary: 28000.00
 
 Q120 – Complete Mini Project (Student Management System)
-📖 Problem Statement
+Problem Statement
 Develop a mini project using arrays, strings, structures and functions.
 
-💻 Code
+Code
 #include <stdio.h>
 
 struct Student
@@ -205,7 +205,7 @@ int main()
     return 0;
 }
 
-🖥️ Output
+Output
 Enter Roll, Name and Marks: 101 Rahul 85
 Enter Roll, Name and Marks: 102 Neha 91
 Enter Roll, Name and Marks: 103 Aman 78
