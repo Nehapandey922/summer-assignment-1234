@@ -1,4 +1,4 @@
-📌 Q61. Find Missing Number in an Array
+Q61. Find Missing Number in an Array
 Question
 Write a C program to find the missing number in an array containing numbers from 1 to N.
 
@@ -27,7 +27,7 @@ Explanation
 Calculate the sum of numbers from 1 to N.
 Subtract the array sum from the total sum.
 
-📌 Q62. Find Maximum Frequency Element
+ Q62. Find Maximum Frequency Element
 Question
 Write a C program to find the element with the highest frequency.
 
@@ -68,7 +68,7 @@ Explanation
 Count occurrences of every element.
 Print the element with the highest frequency.
 
-📌 Q63. Find Pair with Given Sum
+Q63. Find Pair with Given Sum
 Question
 Write a C program to find all pairs whose sum equals a given value.
 
@@ -102,7 +102,7 @@ Explanation
 Compare every pair.
 Print pairs whose sum matches the given value.
 
-📌 Q64. Remove Duplicates from an Array
+ Q64. Remove Duplicates from an Array
 Question
 Write a C program to remove duplicate elements from an array.
 
