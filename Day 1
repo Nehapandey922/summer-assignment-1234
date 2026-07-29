@@ -24,7 +24,7 @@ Enter a number: 10
 Sum = 55
 
 
-✅ Q2. Print Multiplication Table
+Q2. Print Multiplication Table
 Problem Statement
 Write a C program to print the multiplication table of a given number.
 
@@ -58,7 +58,7 @@ Enter a number: 5
 5 x 10 = 50
 
 
-✅ Q3. Find Factorial of a Number
+ Q3. Find Factorial of a Number
 Problem Statement
 Write a C program to find the factorial of a number.
 
@@ -85,7 +85,7 @@ Enter a number: 5
 Factorial = 120
 
 
-✅ Q4. Count Digits in a Number
+Q4. Count Digits in a Number
 Problem Statement
 Write a C program to count the number of digits in a given number.
 
