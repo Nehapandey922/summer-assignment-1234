@@ -43,7 +43,7 @@ Book ID      : 101
 Book Name    : C Programming
 Author Name  : Dennis Ritchie
 
-📌 Q110. Bank Account System
+ Q110. Bank Account System
 Problem Statement
 Write a C program to create a Bank Account System that stores customer details and account balance.
 
@@ -88,7 +88,7 @@ Account No : 12345
 Name       : Neha Pandey
 Balance    : 50000.00
 
-📌 Q111. Ticket Booking System
+Q111. Ticket Booking System
 Problem Statement
 Write a C program to create a Ticket Booking System that stores passenger details.
 
@@ -133,7 +133,7 @@ Passenger  : Neha Pandey
 Seat No    : 15
 Destination: Delhi
 
-📌 Q112. Contact Management System
+ Q112. Contact Management System
 Problem Statement
 Write a C program to create a Contact Management System that stores contact details.
 
